@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="shop_api_gateway" />
+        <module name="shop_eureka_server" />
+        <module name="shop_hystrix_turbine" />
+        <module name="shop_service_common" />
+        <module name="shop_service_config" />
+        <module name="shop_service_order" />
+        <module name="shop_service_order_hystrix_feign" />
+        <module name="shop_service_order_hystrix_rest" />
+        <module name="shop_service_product" />
+        <module name="shop_service_user" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

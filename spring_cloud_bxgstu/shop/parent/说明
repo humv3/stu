@@ -1,0 +1,2 @@
+stream的生成者在shop_service_order_hystrix_feign中
+消费者设定在product中

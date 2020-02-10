@@ -1,0 +1,4 @@
+
+9squid:S1214""Move constants to a class or enum.(“ó¬
+~squid:S1845"hRename method "myOutput" to prevent any misunderstanding/clash with field "MYOUTPUT" defined on line 17.(áÔ(
+‚squid:S1845"fRename method "myInput" to prevent any misunderstanding/clash with field "MYINPUT" defined on line 25.(´‰¨üÿÿÿÿ

@@ -1,0 +1,37 @@
+server:
+  port: 9001 #端口
+spring:
+  application:
+    name: service-order #服务名称
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_could_bxg_stu?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 101010
+  jpa:
+    database: MySQL
+    show-sql: true
+    open-in-view: true
+#配置Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka/ #多个eurekaserver之间用,隔开
+  instance:
+    prefer-ip-address: true #使用ip地址注册
+    metadata-map:            #
+      c1: 1
+      c2: 2
+    #instance-id: ${spring.cloud.client.ip-address}:${server.port} #向注册中心中注册服务id
+    #lease-renewal-interval-in-seconds: 5 #向注册中心中注册服务id
+    # lease-expiration-duration-in-seconds: 10 #续约到期的时间
+feign:
+  compression:
+    request:
+      enabled: true #开启请求压缩
+      mime-types: text/html,application/xml,application/json#设置压缩的数据类型
+      min-request-size: 2048 #设置触发压缩的大小下限
+    response:
+      enabled: true #开启响应压缩
+      mime-types: text/html,application/xml,application/json#设置压缩的数据类型
+      min-request-size: 2048 #设置触发压缩的大小下限

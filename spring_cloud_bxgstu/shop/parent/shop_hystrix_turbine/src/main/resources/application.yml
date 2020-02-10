@@ -1,0 +1,14 @@
+server:
+  port: 9099
+spring:
+  application:
+    name: hystrix-turbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka/
+  instance:
+    prefer-ip-address: true
+turbine:
+  appConfig: service-order  # 要监控的微服务列表，多个用,分隔
+  clusterNameExpression: "'default'"

@@ -1,0 +1,40 @@
+server:
+  port: 9002 #端口
+spring:
+  #profiles: dev0
+  application:
+    name: service-product #服务名称
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_could_bxg_stu?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 101010
+  jpa:
+    database: MySQL
+    show-sql: true
+    open-in-view: true
+  rabbitmq:
+    addresses: 127.0.0.1
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        input: #内置的获取消息的通道 , 从itcast-default中获取消息
+          destination: destination-defalut
+          contentType: text/plain
+        myInput:
+          destination: destination-my
+          contentType: text/plain
+      binders:
+        defaultRabbit:
+          type: rabbit
+#配置Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka/ #多个eurekaserver之间用,隔开
+  instance:
+    prefer-ip-address: true #使用ip地址注册
+
+

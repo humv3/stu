@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/god-tian_admin/file.git
+          #username: 405914140@qq.com   私有库需要配置这个
+          #password:
+server:
+  port: 1000 #端口
