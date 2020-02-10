@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    active: dev
+application: springboot-stu of tian
